@@ -20,7 +20,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/update/",{headers:{authorization:`Token ${access}`}})
+      .get("https://python-demo-weavers.herokuapp.com/api/update/",{headers:{authorization:`Token ${access}`}})
       .then((res) => {
         setUsername(res.data.first_name)
         setEmail(res.data.email)

@@ -20,7 +20,7 @@ function Register() {
         "last_name": lname,
         "password": password
       }
-    axios.post("http://127.0.0.1:8000/api/register/",data).then((res)=> {
+    axios.post("https://python-demo-weavers.herokuapp.com/api/register/",data).then((res)=> {
       if(res.status === 201){
         Swal.fire({
             icon: 'success',

@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
         'refresh':authToken.refresh
     }
     axios
-      .post("http://127.0.0.1:8000/api/refresh/", data)
+      .post("https://python-demo-weavers.herokuapp.com/api/refresh/", data)
       .then((res) => {
         if (res.status === 200) {
           setAuthToken(res.data);
@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
       password: password,
     };
     axios
-      .post("http://127.0.0.1:8000/api/login/", data)
+      .post("https://python-demo-weavers.herokuapp.com/api/login/", data)
       .then((res) => {
         if (res.status === 200) {
           setAuthToken(res.data);

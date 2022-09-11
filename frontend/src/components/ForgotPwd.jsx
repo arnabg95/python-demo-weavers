@@ -27,7 +27,7 @@ function ForgotPwd() {
         password: password
       };
       axios
-        .patch("http://127.0.0.1:8000/api/update/", data,{headers:{authorization:`Token ${access}`}})
+        .patch("https://python-demo-weavers.herokuapp.com/api/update/", data,{headers:{authorization:`Token ${access}`}})
         .then((res) => {
           console.log(res);
           if (res.status === 200) {
@@ -52,7 +52,7 @@ function ForgotPwd() {
       otp: otp,
     };
     axios
-      .post("http://127.0.0.1:8000/api/reset-otp/", data)
+      .post("https://python-demo-weavers.herokuapp.com/api/reset-otp/", data)
       .then((res) => {
         console.log(res);
         if (res.status === 200) {
@@ -71,7 +71,7 @@ function ForgotPwd() {
       email: email,
     };
     axios
-      .post("http://127.0.0.1:8000/api/reset-email/", data)
+      .post("https://python-demo-weavers.herokuapp.com/api/reset-email/", data)
       .then((res) => {
         console.log(res);
         if (res.status === 200) {
